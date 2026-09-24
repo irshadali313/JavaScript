@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage</title>
+</head>
+
+<body>
+    <script>
+
+        let car = {
+            made: "toyota",
+            type: "classic",
+            model: 2026,
+            registration_year: 2026
+        }
+
+        car.base = 2025
+
+
+        let str = JSON.stringify(car, null, 4)
+        localStorage.setItem("car_details",str)
+
+
+        const carfromlocal  = JSON.parse(localStorage.getItem("car_details"))
+
+        console.log(carfromlocal.made);
+        
+        
+
+
+
+    </script>
+</body>
+
+</html>
